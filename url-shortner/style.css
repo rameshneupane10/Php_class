@@ -1,0 +1,26 @@
+.design{
+    background-color: black;
+    height: 150px;
+    width: auto;
+   display: flex;
+  align-items :space-evenly;
+}
+h1
+{
+    color: aliceblue;
+}
+
+form
+{
+    background-color: beige;
+    height: 300px;
+}
+form > input
+{
+    height: 10%;
+    width: 40%
+}
+form>p{
+
+    font-size: large ;
+}

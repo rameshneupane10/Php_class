@@ -6,7 +6,7 @@ echo "<pre>";
 var_dump($shopping_list);
 echo "</pre>";
 
-?>
+?>ls
 <!DOCTYPE html>
 <html lang="en">
 
