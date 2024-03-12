@@ -25,25 +25,19 @@
 </html>
 
 <?php
-$data1 = $_POST['fname'];
-$data2 = $_POST['mname'];
-$data3= $_POST['lname'];
-$data4 = $_POST['pnum'];
+if(isset($_POST['fname'], $_POST['mname'], $_POST['lname'], $_POST['pnum'])) {
+            
+    $first_name = $_POST['fname'];
+    $middle_name = $_POST['mname'];
+    $last_name = $_POST['lname'];
+    $phone_num = $_POST['pnum'];
 
+    $sql = "INSERT INTO contacts (first_name, middle_name, last_name, phone_number) 
+            VALUES ('$first_name', '$middle_name', '$last_name', '$phone_num')";
 
+header('Location: /');
 
-$sql1 = "insert into contacts (first_name,middle_name,last_name,phone_number) 
-        values ('$data1',$data2',$data3',$data4')";
-// $sql2 = "insert into contacts (middle_name) values ('$data2')";
-// $sql3 = "insert into contacts (last_name) values ('$data3')";
-// $sql4 = "insert into contacts (phone_number) values ('$data4')";
-
-mysqli_query($conn, $sql1);
-// mysqli_query($conn, $sql2);
-// mysqli_query($conn, $sql3);
-// mysqli_query($conn, $sql4);
-
-// header('Location: /');
+}
 
 ?>
  

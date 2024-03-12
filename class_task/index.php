@@ -20,16 +20,8 @@
         <form action="add_contacts.php" method="post">
             <button type="submit">Create</button>
         </form> <br>
-        <ul>
-            <?php
-            foreach($rows as $value)
-            {
-                echo "<li>{$value['first_name' ]} {$value['middle_name' ]} {$value['last_name' ]} {$value['phone_number' ]}</li>";
-            }
-            ?>
-        </ul>
         <section>
-        <form action="edit_contacts.php" method="post">
+        <form action="display_contact.php" method="post">
             <button type="submit">Read</button>
         </form> <br>
         <form action="edit_contact.php" method="post">
