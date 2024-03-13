@@ -1,6 +1,16 @@
 <?php
  require "./connect.php";
+ $first_name = $_POST['fname'];
+ $middle_name = $_POST['mname'];
+ $last_name = $_POST['lname'];
+ $phone_num = $_POST['pnum'];
+
+    $sql = "INSERT INTO contacts (first_name, middle_name,last_name,phone_number) VALUES ('$first_name','$middle_name','$last_name','$phone_num')";
+    mysqli_query($conn,$sql);
+    header('Location: /');
  ?>
+
+ <!-- Html from to insert the details -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,13 +19,13 @@
     <title>Add Contact</title>
 </head>
 <body>
-    <main>
+    <main>  
         <section>
-            <form action="" method="POST">
-        <input type="text" name="fname" placeholder="First_name"><br><br>
-        <input type="text" name="mname" placeholder="middle_name"><br><br>
-        <input type="text" name="lname" placeholder="last_name"><br><br>
-        <input type="text" name="pnum" placeholder="Phone_number"><br><br>
+            <form action="add_contacts.php" method="POST">
+        <input type="text" name="fname" placeholder="First name"><br><br>
+        <input type="text" name="mname" placeholder="middle name"><br><br>
+        <input type="text" name="lname" placeholder="last name"><br><br>
+        <input type="text" name="pnum" placeholder="Phone number"><br><br>
          <button type="submit">Insert</button>
          </form>
 
@@ -23,21 +33,3 @@
         </main>
 </body>
 </html>
-
-<?php
-if(isset($_POST['fname'], $_POST['mname'], $_POST['lname'], $_POST['pnum'])) {
-            
-    $first_name = $_POST['fname'];
-    $middle_name = $_POST['mname'];
-    $last_name = $_POST['lname'];
-    $phone_num = $_POST['pnum'];
-
-    $sql = "INSERT INTO contacts (first_name, middle_name, last_name, phone_number) 
-            VALUES ('$first_name', '$middle_name', '$last_name', '$phone_num')";
-
-header('Location: /');
-
-}
-
-?>
- 
