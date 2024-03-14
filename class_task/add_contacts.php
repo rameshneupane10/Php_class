@@ -7,7 +7,8 @@
 
     $sql = "INSERT INTO contacts (first_name, middle_name,last_name,phone_number) VALUES ('$first_name','$middle_name','$last_name','$phone_num')";
     mysqli_query($conn,$sql);
-    header('Location: /');
+    
+
  ?>
 
  <!-- Html from to insert the details -->

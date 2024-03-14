@@ -5,6 +5,8 @@ $middle=$_POST['mname'];
 $last=$_POST['lname'];
 $number=$_POST['pnum'];
 
+$sql="update into contacts(first_name, middle_name,last_name,phone_number)"
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
